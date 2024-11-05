@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.3.4"
 
 gem "rails",           "7.0.4"
 gem "sassc-rails",     "2.1.2"
@@ -14,7 +14,7 @@ gem "puma",            "5.6.4"
 gem "bootsnap",        "1.12.0", require: false
 
 group :development, :test do
-  gem "sqlite3", "1.4.2"
+  gem "sqlite3", "2.1.0"
   gem "debug",   "1.5.0", platforms: %i[ mri mingw x64_mingw ]
 end
 
@@ -26,6 +26,10 @@ group :test do
   gem "capybara",           "3.37.1"
   gem "selenium-webdriver", "4.2.0"
   gem "webdrivers",         "5.0.0"
+end
+
+group :production do
+  gem "pg", "1.3.5"
 end
 
 # source "https://rubygems.org"
@@ -65,23 +69,23 @@ end
 # # gem "image_processing", "~> 1.2"
 #
 # group :development, :test do
-#   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-#   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+# #   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+#    gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 #
 #   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
 #   gem "brakeman", require: false
 #
 #   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 #   gem "rubocop-rails-omakase", require: false
-# end
+#  end
 #
-# group :development do
+#  group :development do
 #   # Use console on exceptions pages [https://github.com/rails/web-console]
-#   gem "web-console"
-# end
-#
-# group :test do
-#   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-#   gem "capybara"
-#   gem "selenium-webdriver"
-# end
+#    gem "web-console"
+#  end
+
+ # group :test do
+ #  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+ #   gem "capybara"
+ #   gem "selenium-webdriver"
+ # end
