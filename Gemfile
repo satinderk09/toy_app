@@ -5,7 +5,7 @@ ruby "3.3.4"
 
 gem "rails",           "7.2.2"
 gem "sassc-rails",     "2.1.2"
-gem "sprockets-rails", "3.4.2"
+gem "sprockets-rails", "3.5.2"
 gem "importmap-rails", "1.1.0"
 gem "turbo-rails",     "1.1.1"
 gem "stimulus-rails",  "1.0.4"
