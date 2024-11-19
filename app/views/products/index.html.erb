@@ -1,0 +1,7 @@
+<ul>
+  <h1>Toys shop</h1>
+  <% @products.each do |toy| %>
+      <%= render 'product', product: toy %>
+  <% end %>
+
+</ul>
